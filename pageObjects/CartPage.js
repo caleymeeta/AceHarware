@@ -21,7 +21,7 @@ var CartPageCommands = {
     },
     increaseQuantityOfProduct: function (productLocation) {
         
-         this.click('@cartTable'  +  '/tr[1]')
+         this.click('@cartTableQuantityIncrease')
     },  
 
     cartPagefunction: function () {
@@ -149,10 +149,11 @@ module.exports = {
 
 
         },
-        cartTable: {
-            selector: "//tbody[@class='mz-table-cart-items/tr[%s]']",
+        cartTableQuantityIncrease: {
+            //selector: "//tbody[@class='mz-table-cart-items/tr[%s]']",
+            selector:  "//tbody[@class='mz-table-cart-items']/tr[1]//a[@data-mz-action='increaseQty']",
             locateStrategy: 'xpath'
-
+          
         }
         
 

@@ -26,7 +26,7 @@ module.exports = {
 
         homepage.searchProduct(8065385)
         //3429263
-        ProdPage.Product_Price();
+        /ProdPage.Product_Price();
         ProdPage.addToCart()
         AddToYourCart.Added_to_Cart()
        // homepage.searchProduct(3429263)
