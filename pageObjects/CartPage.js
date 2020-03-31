@@ -20,8 +20,32 @@ var CartPageCommands = {
 
     },
     increaseQuantityOfProduct: function (productLocation) {
-        
-         this.click('@cartTableQuantityIncrease')
+        //  this.click('@cartTableQuantityIncrease')
+        this.api.useXpath()
+            //.click(this.getQuantityIncreaseByItemNumber(productLocation))
+            .click(`//tbody[@class='mz-table-cart-items']/tr[${productLocation}]//a[@data-mz-action='increaseQty']`)
+            .useCss()
+            .pause(5000)
+    },  
+    getQuantityIncreaseByItemNumber: function(num){
+        return `//tbody[@class='mz-table-cart-items']/tr[${num}]//a[@data-mz-action='increaseQty']`
+    
+    },  
+    updateCart: function (productLocation) {
+        //  this.click('@cartTableQuantityIncrease')
+        this.api.useXpath()
+            //.click(this.getQuantityIncreaseByItemNumber(productLocation))
+            .click(`//table[@class='mz-table mz-table-cart  ']//tr[${productLocation}]//a[@class='mz-carttable-qty-update']`)
+            .useCss()
+            .pause(5000)
+    },  
+    removeCart: function (productLocation) {
+        //  this.click('@cartTableQuantityIncrease')
+        this.api.useXpath()
+            //.click(this.getQuantityIncreaseByItemNumber(productLocation))
+            .click(`//tbody[@class='mz-table-cart-items']/tr[${productLocation}]//a[@class='mz-carttable-qty-remove']`)
+            .useCss()
+            .pause(5000)
     },  
 
     cartPagefunction: function () {
@@ -148,14 +172,13 @@ module.exports = {
 
 
 
-        },
-        cartTableQuantityIncrease: {
-            //selector: "//tbody[@class='mz-table-cart-items/tr[%s]']",
-            selector:  "//tbody[@class='mz-table-cart-items']/tr[1]//a[@data-mz-action='increaseQty']",
-            locateStrategy: 'xpath'
-          
         }
         
 
     }
 }
+
+
+
+
+

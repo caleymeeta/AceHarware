@@ -25,31 +25,39 @@ module.exports = {
 
 
         homepage.searchProduct(8065385)
-        //3429263
-        /ProdPage.Product_Price();
+        ProdPage.Product_Price();
         ProdPage.addToCart()
         AddToYourCart.Added_to_Cart()
-       // homepage.searchProduct(3429263)
-       // ProdPage.Product_Price();
-       // ProdPage.addToCart()
-       // AddToYourCart.Added_to_Cart()
+        homepage.searchProduct(3429263)
+        ProdPage.Product_Price();
+        ProdPage.addToCart()
+        AddToYourCart.Added_to_Cart()
         cartPage.increaseQuantityOfProduct(1);
-        //CartPage.increaseQuantityOfProduct(2);
-        //CartPage.increaseQuantityOfProduct(1);
+        cartPage.updateCart(1)
+       // cartPage.removeCart(1)
+        cartPage.updateCart(1)
+       cartPage.increaseQuantityOfProduct(2);
+       cartPage.updateCart(2)
        
+       cartPage.increaseQuantityOfProduct(1);
+       cartPage.updateCart(1)
 
 
-      //  cartPage.cartPagefunction()
-       // cartPage.selectShippingMethod('shipToHome')
-    
-        
-         
-     
 
-      
+     // cartPage.cartPagefunction()
+      //cartPage.selectShippingMethod('shipToHome')
 
+
+
+
+
+
+
+    }
 }
-}
+
+
+
 
 
 
